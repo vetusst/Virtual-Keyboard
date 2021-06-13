@@ -1,0 +1,88 @@
+body {
+    background-color: rgba(233, 213, 247, 0.5);
+    /* background-color: rgba(100, 76, 117, 0.5); */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 72px;
+}
+h3 {
+    font-size: 32px;
+}
+
+textarea {
+    background-color: rgba(233, 213, 247, 0.041);
+    margin: 10px;
+    width: 1003px;
+    height: 100px;
+    font-size: 18px;
+}
+
+.keyboard {
+    background-color: rgb(58, 58, 58);
+    padding: 5px;
+    width: 999px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+    color:rgba(209, 209, 209, 0.5);
+    font-size: 18px;
+    font-weight: bold;
+}
+.keyboard_row {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.keyboard_row > * {
+    /* margin: 3px; */
+    position: relative;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 55px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.418);
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.61);
+}
+
+
+.sub {
+    position: absolute;
+    top: -30%;
+    left: 10%;
+}
+[data-code='Backslash'] {
+    width: 80px;
+}
+[data-code='Tab'] {
+    width: 100px;
+}
+[data-code='Backspace'], [data-code='CapsLock'], [data-code='ControlRight'], [data-code='ControlLeft'] {
+    width: 120px;
+}
+[data-code='Enter'] {
+    width: 140px;
+}
+[data-code='ShiftLeft'], [data-code='ShiftRight'], [data-code='ControlRight'], [data-code='ControlLeft']  {
+    width: 160px;
+}
+[data-code='Space'] {
+    width: 395px;
+}
+
+.active {
+    background-color: rgba(129, 111, 207, 0.705);
+    /* background-color: rgba(127, 106, 143, 0.904); */
+}
