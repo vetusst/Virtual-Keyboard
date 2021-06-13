@@ -141,7 +141,7 @@ export default [
   },
   {
     code: 'CapsLock',
-    lower: 'CapsLock',
+    lower: 'Caps Lock',
     upper: null,
   },
   {
@@ -266,12 +266,12 @@ export default [
   },
   {
     code: 'ControlLeft',
-    lower: 'Control',
+    lower: 'Ctrl',
     upper: null,
   },
   {
     code: 'MetaLeft',
-    lower: 'Meta',
+    lower: 'Win',
     upper: null,
   },
   {
@@ -281,7 +281,7 @@ export default [
   },
   {
     code: 'Space',
-    lower: ' ',
+    lower: 'Space',
     upper: null,
   },
   {
@@ -291,12 +291,12 @@ export default [
   },
   {
     code: 'ContextMenu',
-    lower: 'ContextMenu',
+    lower: 'Fn',
     upper: null,
   },
   {
     code: 'ControlRight',
-    lower: 'Control',
+    lower: 'Ctrl',
     upper: null,
   },
 ];
