@@ -299,4 +299,24 @@ export default [
     lower: 'Ctrl',
     upper: null,
   },
+  {
+    code: 'ArrowLeft',
+    lower: 'ArrowLeft',
+    upper: null,
+  },
+  {
+    code: 'ArrowDown',
+    lower: 'ArrowDown',
+    upper: null,
+  },
+  {
+    code: 'ArrowUp',
+    lower: 'ArrowUp',
+    upper: null,
+  },
+  {
+    code: 'ArrowRight',
+    lower: 'ArrowRight',
+    upper: null,
+  },
 ];
