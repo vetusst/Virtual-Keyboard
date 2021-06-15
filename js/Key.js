@@ -16,8 +16,6 @@ export default class Key {
 
     this.letter = create('div', 'letter', lower);
 
-    // this.div = create('div', 'keyboard__key', [this.sub, this.letter], null, ['code', this.code],
-    //   this.isFnKey ? ['fn', 'true'] : ['fn', 'false']);
     this.div = create('div', 'keyboard__key', [this.sub, this.letter], null, ['code', this.code], ['fn', this.isFnKey]);
   }
 }

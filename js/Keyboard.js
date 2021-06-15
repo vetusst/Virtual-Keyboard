@@ -5,8 +5,8 @@ import language from './layouts/index.js';
 import Key from './Key.js';
 
 const main = create('main', '', [
-  create('h1', 'header', 'Virtual Keyboard'),
-  create('h2', 'description', 'Press Shift + Alt to change keyboard language')], null);
+  create('h1', 'header', '<u>Virtual Keyboard'),
+  create('h2', 'description', '<i>Press <code>Shift + Alt</code> to change keyboard language</i>')], null);
 
 export default class Keyboard {
   constructor(rowsOrder) {
@@ -67,10 +67,9 @@ export default class Keyboard {
   handleEvents = (keyObj, type) => {
     const { code } = keyObj;
     if (type.match(/keydown|mousedown/)) {
+      if (code.match(/Shift/)) this.isShift = true;
+      if (code.match(/Alt/)) this.isAlt = true;
       keyObj.div.classList.add('active');
-
-      if (code === 'ShiftLeft') this.isShift = true;
-      if (code === 'AltLeft') this.isAlt = true;
       if (code === 'CapsLock') {
         this.capsMode();
         this.isCaps = !this.isCaps;
@@ -89,11 +88,11 @@ export default class Keyboard {
     } else if (type.match(/keyup|mouseup/)) {
       keyObj.div.classList.remove('active');
 
-      if (code === 'ShiftLeft') {
+      if (code.match(/Shift/)) {
         this.isShift = false;
         this.shiftMode();
       }
-      if (code === 'AltLeft') this.isAlt = false;
+      if (code.match(/Alt/)) this.isAlt = false;
     }
   }
 
