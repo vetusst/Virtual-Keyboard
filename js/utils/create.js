@@ -37,11 +37,6 @@ export default function create(elem, classNames, children, parent, ...dataAttr) 
       } else {
         element.dataset[attrName] = attrValue;
       }
-      // if (attrName.match(/value|id|placeholder|cols|rows|autocorrect|spellcheck/) || attrValue === '') {
-      //     element.setAttribute(attrName, attrValue)
-      // } else {
-      //     element.dataset[attrName] = attrValue
-      // }
     });
   }
   return element;

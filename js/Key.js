@@ -6,7 +6,7 @@ export default class Key {
     this.lower = lower;
     this.upper = upper;
     this.code = code;
-    this.isFnKey = Boolean(code.match(/Backspace|Tab|CapsLock|Enter|ShiftLeft|ShiftRight|ControlLeft|MetaLeft|AltLeft|AltRight|ContextMenu|ControlRight/));
+    this.isFnKey = Boolean(code.match(/Backspace|Tab|CapsLock|Enter|ShiftLeft|ShiftRight|ControlLeft|MetaLeft|AltLeft|AltRight|ContextMenu|ControlRight|Space/));
 
     if (upper && upper.match(/[^a-zA-Zа-яёЁА-Я0-9]/)) {
       this.sub = create('div', 'sub', this.upper);
@@ -14,22 +14,7 @@ export default class Key {
       this.sub = create('div', 'sub', '');
     }
 
-    switch (lower) {
-      case 'CapsLock':
-        this.letter = create('div', 'letter', 'Caps Lock');
-        break;
-      case 'Control':
-        this.letter = create('div', 'letter', 'Ctrl');
-        break;
-      case 'ContextMenu':
-        this.letter = create('div', 'letter', 'Fn');
-        break;
-      case 'Meta':
-        this.letter = create('div', 'letter', 'Win');
-        break;
-      default:
-        this.letter = create('div', 'letter', lower);
-    }
+    this.letter = create('div', 'letter', lower);
 
     // this.div = create('div', 'keyboard__key', [this.sub, this.letter], null, ['code', this.code],
     //   this.isFnKey ? ['fn', 'true'] : ['fn', 'false']);
